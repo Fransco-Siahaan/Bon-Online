@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon Online</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        .openBox{
+            display: block;
+        }
+        .openBtn{
+            display: block;
+        }
+        .newBon{
+            display: block;
+        }
+    </style>
+
+</head>
+<body class="font-Poppins bg-slate-100">
+
+    <!-- Judul -->
+    <header class="text-4xl font-semibold pt-12 pl-2 relative z-[999]">
+        Bon Online
+    </header>
+    <!-- Judul -->
+
+    <!-- Form Input -->
+    <section class="w-full pt-2 pb-4">
+        <div class="container">
+            <p class="font-semibold text-base mb-2">Buat bon baru</p>
+            <button onclick="add()" class="text-xs text-slate-500 flex items-center border-2 border-green-500 p-2 rounded-full group hover:bg-green-500 hover:text-white transition-all duration-300 ease-in-out">Tambahkan <i class='bx bx-plus'></i></button>
+        </div>
+        <form class="max-w-lg relative" onsubmit="return false">
+            <div class="container hidden z-30 absolute top-8 bg-green-300 shadow shadow-slate-300 pb-7" id="dataBon">
+                <h1 class="mb-8 text-black text-base text-center font-semibold pt-3 ">Hutang Seseorang</h1>
+
+                <span class="absolute right-3 top-3 px-2 py-[3px] rounded-full text-center text-lg"><i class='bx bx-x cursor-pointer' id="hapus-note"></i></span>
+
+                <table>
+                    <tr class="flex gap-2">
+                        <td><label for="Nama" class="text-sm font-semibold cursor-pointer text-slate-700">Nama</label></td>
+                        <td><input required type="text" id="Nama" placeholder="Nama Seseorang" class="w-full text-slate-700 text-xs p-1 focus:border-0 focus:outline-0 rounded-sm ring-1 ring-green-500 placeholder:text-slate-400" maxlength="13"></td>
+                        <td><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="bon" placeholder="Bon list" class="w-full text-slate-700 text-xs p-1 focus:border-0 focus:outline-0 rounded-sm ml-[1px] ring-1 ring-green-500 placeholder:text-slate-400" maxlength="13"></td>
+                        <td>
+                            <button class="ml-4 bg-green-500 px-2 py-[2px] rounded-md text-white active:scale-90 transition-all duration-200 ease-in-out" id="added">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="mt-4 mb-4 flex flex-col gap-y-3" id="listbon"></ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="hidden" id="tombolBTN">
+                            <button class="bg-red-400 text-white py-1 px-2 rounded-md mr-2 shadow-sm shadow-slate-400" id="batalBon">Batal</button>
+                            <button class="bg-green-500 py-1 px-2 text-white rounded-md shadow-sm shadow-slate-400" id="simpanBon"">Simpan</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </section>
+    <!-- Form Input -->
+
+    <!-- Section Note BON -->
+    <section class="w-full h-dvh overflow-auto pb-24 mb-36">
+        <div class="container">
+            <div class="flex relative flex-col gap-1 border-t-2 border-black pt-3" id="hasilbon"></div>
+        </div>
+    </section>
+    <!-- Section Note BON -->
+
+    <!-- Footer -->
+    <footer class="w-full h-52 p-3 bg-black">
+        <div class="container">
+            <div class="text-white">
+                <section class="pt-12 pb-5 flex gap-5 items-center justify-center">
+                    <a href="https://www.facebook.com/fransko.siahaan?locale=id_ID" class="border-2 border-white px-2 py-2 rounded-full flex justify-center items-center">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/franscosiahaan/" class="border-2 border-white px-2 py-2 rounded-full flex justify-center items-center">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </section>
+                <p class="text-xs text-center">
+                    Dibuat oleh <span class="text-green-500 font-semibold">Fransco Siahaan</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="JS/index.js"></script>
+</body>
+</html>

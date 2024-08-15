@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.list-bon{
+    @apply bg-white pl-2 py-1 rounded-md shadow shadow-gray-400;
+}
+
+.warning-text{
+    @apply text-sm text-red-600;
+}
+
+.new{
+    @apply w-full border-2 border-slate-300 p-1;
+}
+
+.org{
+    @apply pb-2 pt-1 border-b border-black text-center font-semibold;
+}
+
+.waktu{
+    @apply text-xs absolute top-4 right-2 font-semibold;
+}
+
+.Iconsph{
+    @apply absolute top-4 left-1 text-green-500 cursor-pointer;
+}
